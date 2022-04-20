@@ -35,6 +35,7 @@ int main(int argc, char *argv[]){
                     if(!czyLiczba(argv[i])) throw std::invalid_argument("niepawidlowa dana");
                     int n = atoi(argv[i]);
                     cout << Tp->wspolczynnik(n) << endl;
+                    delete Tp;
                 } catch(const std::invalid_argument& e){
                     cout << argv[i] << " - " << e.what() << endl;
                 }
